@@ -1,0 +1,242 @@
+.what-is-somma{
+    position: relative;
+    overflow-x: hidden;
+    padding: 1em 2em;
+    text-align: center;
+}
+.what-is-somma::before{
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #8980F5;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0.25;
+}
+.title{
+    text-transform: uppercase;
+    color: #8980F5;
+    font-weight: bold;
+    font-size: 1.5em;
+    letter-spacing: 0.25em;
+}
+.description{
+    color: white;
+    line-height: 1.8em;
+    font-size: 1em;
+    font-weight: 500;
+}
+.right{
+    border-radius: 16px;
+}
+
+@media only screen and (min-width: 700px) {
+    .what-is-somma{
+        text-align: left;
+        display: grid;
+        grid-template-columns: 40% auto;
+    }
+    .left{
+        display: grid;
+        place-content: center;
+    }
+
+}
+
+
+
+
+
+
+.list-group-item {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+  
+.list-group-item:hover {
+    font-weight:bold;
+    background-color: transparent;
+    color: white;
+    font-size: 1.1em;
+}
+.list-group-item:active {
+    border-color: #8980F5;
+    background-color: transparent;
+    color: white;
+}
+.list-group-item:focus {
+    font-weight:bold;
+    background-color: transparent;
+    color: white;
+    border-color: #8980F5;
+}
+.active{
+    background-color: transparent !important;
+    font-weight:bold !important;
+    color: white !important;
+    font-size: 1.1em !important;
+    border-color: #8980F5 !important;
+}
+    
+.tab-pane{
+    color: white;
+}
+
+.my-container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 100px;
+}
+
+.row {
+display: -ms-flexbox;
+display: flex;
+-ms-flex-wrap: wrap;
+flex-wrap: wrap;
+margin-right: 30px;
+margin-left: 30px;
+}
+
+.col-4 {
+-ms-flex: 0 0 10.333333%;
+flex: 0 0 10.333333%;
+max-width: 10.333333%;
+}
+
+.col-8 {
+-ms-flex: 0 0 66.666667%;
+flex: 0 0 66.666667%;
+max-width: 66.666667%;
+margin-left: 100px;
+}
+
+
+.list-group {
+display: -ms-flexbox;
+display: flex;
+-ms-flex-direction: column;
+flex-direction: column;
+padding-left: 0;
+margin-bottom: 0;
+}
+
+.list-group-item-action {
+width: 100%;
+color: white;
+text-align: inherit;
+text-decoration: none;
+}
+
+.list-group-item-action:hover, .list-group-item-action:focus {
+z-index: 1;
+color: white;
+text-decoration: none;
+background-color: transparent;
+}
+
+.list-group-item-action:active {
+color: white;
+background-color: transparent;
+}
+
+.list-group-item {
+position: relative;
+display: block;
+padding: 0.75rem 1.25rem;
+background-color: transparent;
+border: 1px solid white;
+}
+
+.list-group-item:first-child {
+border-top-left-radius: 0.25rem;
+border-top-right-radius: 0.25rem;
+}
+
+.list-group-item:last-child {
+border-bottom-right-radius: 0.25rem;
+border-bottom-left-radius: 0.25rem;
+}
+
+.list-group-item.disabled, .list-group-item:disabled {
+color: #6c757d;
+pointer-events: none;
+background-color: #fff;
+}
+
+.list-group-item.active {
+z-index: 2;
+color: #fff;
+background-color: #007bff;
+border-color: #007bff;
+}
+
+.list-group-item + .list-group-item {
+border-top-width: 0;
+}
+
+.list-group-item + .list-group-item.active {
+margin-top: -1px;
+border-top-width: 1px;
+}
+
+.list-group-horizontal {
+-ms-flex-direction: row;
+flex-direction: row;
+}
+
+.list-group-horizontal .list-group-item:first-child {
+border-bottom-left-radius: 0.25rem;
+border-top-right-radius: 0;
+}
+
+.list-group-horizontal .list-group-item:last-child {
+border-top-right-radius: 0.25rem;
+border-bottom-left-radius: 0;
+}
+
+.list-group-horizontal .list-group-item.active {
+margin-top: 0;
+}
+
+.list-group-horizontal .list-group-item + .list-group-item {
+border-top-width: 1px;
+border-left-width: 0;
+}
+
+.list-group-horizontal .list-group-item + .list-group-item.active {
+margin-left: -1px;
+border-left-width: 1px;
+}
+.tab-content > .tab-pane {
+display: none;
+}
+
+.tab-content > .active {
+display: block;
+}
+
+
+.fade {
+transition: opacity 0.15s linear;
+}
+
+@media (prefers-reduced-motion: reduce) {
+.fade {
+    transition: none;
+}
+}
+
+.fade:not(.show) {
+opacity: 0;
+}
+
+.collapse:not(.show) {
+display: none;
+}

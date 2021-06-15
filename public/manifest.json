@@ -1,0 +1,6 @@
+{
+  "short_name": "Somma Visualization",
+  "name": "Somma Visualization",
+  "start_url": ".",
+  "display": "standalone"
+}

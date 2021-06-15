@@ -1,0 +1,50 @@
+.container{
+    height: 100%;
+    width: 100%;
+}
+.diagramContainer{
+    height: 100%;
+    width: 100%;
+}
+.bodyComponent{
+    height: 100%;
+    width: 100%;
+}
+.header-text{
+    color: rgb(148,0,211);
+    padding-bottom: 25px;
+}
+.explore-button{
+    background-color: rgb(148,0,211);
+}
+.curve{
+    height: 2%;
+}
+.sub-header-text{
+    color: white;
+}
+.leftSide{
+    width: 50%;
+    float: left;
+    padding-top: 100px;
+}
+.rightSide{
+    height: 100%;
+    width: 30%;
+    float: right;
+}
+
+/* 600 or less */
+@media only screen and (max-width: 600px) {
+    .sub-header-text{
+        padding: unset;
+        text-align: center;   
+    }
+    .rightSide{
+        display: none;
+    }
+    .leftSide{
+        width: 100%;
+        text-align: center;
+    }
+  }

@@ -1,0 +1,26 @@
+.bottom-navigation{
+    margin: 0;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    height: 60px;
+    width: 40%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);   
+}
+.link{
+    width: 33%;
+    color: #1ecbe1;
+    text-align: center;
+    float: left;
+    padding-top: 20px;
+}
+.link-name{ 
+    font-size: 1vw;
+    text-decoration: none;
+    color: #1ecbe1;
+    text-align: center;
+}
+.link-name:hover{
+    color: white;
+}

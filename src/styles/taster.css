@@ -1,0 +1,17 @@
+.main-div{
+    height: 100%;
+    width: 75%;
+    border: 1px solid red;
+}
+.comparison-header{
+    text-align: center;
+    color: white;
+    font-size: 1.2vw;
+}
+.comparisons{
+    overflow-y: auto;
+}
+.taster-information{
+    border-right: white;
+    border-right-style: dotted;
+}
