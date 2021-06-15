@@ -1,5 +1,7 @@
 # CSCI 4166 Project (Somma)
 
+Hosted with netlify at: https://hardcore-borg-b27f95.netlify.app/
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -10,6 +12,8 @@ Runs the app in the localhost
 Open [http://localhost:3000]to view it in the browser.
 
 ## How to run and use Somma
+
+Download dataset from https://www.kaggle.com/zynicide/wine-reviews then in src folder create a folder called dataset and put the csv inside.
 
 I have attached a short demostration that explains the steps below if you'd rather watch and listen instead of reading the steps below.
 
