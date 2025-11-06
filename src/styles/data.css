@@ -1,42 +1,97 @@
-.sliders{
-    padding-top: 100px;
+.chart-div,
+.line-div {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  max-height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
 }
-.slider-one{
-    width: 100%;
-}
-
-.column-left{
-    width: 50%;
-    float: left;
-    margin-top: 30px;
-    height: 350px;
-}
-.column-right{
-    margin-top: 30px;
-    border: white;
-    border-style: solid;
-    border-radius: 16px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    overflow: auto;
-    height: 100%;
-    width: 45%;
-    float: right;
+/* === Layout container === */
+.data-layout {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgb(5, 5, 5);
+  color: white;
+  position: relative;
 }
 
-/* 700 or less */
-@media only screen and (max-width: 700px) {
-    .line-div{
-        margin-top: 20%;
-    }
-    .column-left{
-        width: 100%;
-    }
-    .column-right{
-        margin-top: 25%;
-        width: 95%;
-        float: left;
-        justify-content: center;    
-    }
+/* === Sidebar === */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 260px;
+  background-color: #101010;
+  border-right: 5px solid #191919;
+  padding: 20px 16px;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 2100;
+}
+
+.sidebar-title {
+  margin-bottom: 40px !important;
+}
+
+.sidebar-section {
+  margin-bottom: 2rem;
+}
+
+/* === Toggle Button === */
+.sidebar-toggle {
+  transition: left 0.5s cubic-bezier(0.25, 1, 0.3, 1),
+    background-color 0.3s ease;
+}
+
+/* === Main Content === */
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  height: 100%;
+  width: 100%;
+  padding: 74px 30px 30px 30px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+/* === Scrollbar Styling === */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+}
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Filter scroll area */
+.sidebar-section > div::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar-section > div::-webkit-scrollbar-thumb {
+  background-color: #323232;
+  border-radius: 8px;
+}
+.sidebar-section > div::-webkit-scrollbar-thumb:hover {
+  background-color: #323232;
+}
+
+/* === Responsive === */
+@media (max-width: 900px) {
+  .content {
+    flex-direction: column;
+  }
 }

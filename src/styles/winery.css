@@ -1,78 +1,91 @@
-.winery-paper{
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    height: 400px;
-    width: 300px;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);   
+.winery-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
 }
-.winery-information{
-    width: 100%;
-    height: 100%;
-}
-.winery-name{
-    text-align: center;
-    color: #9400d3;
-    padding-top: 50px;
-    position: absolute;
-    top: 5%;
-    width: 100%;
-}
-.winery{
-    text-align: center;
-    position: absolute;
-    color: white;
-    top: 6%;
-    width: 100%;
-}
-.statistic{
-    height: 33%;
-    width: 100%;
-}
-.score{
-    text-align: center;
-    color: #1ecbe1;
-    padding-top: 10%;
-}
-.average-rank-sub-header{
-    text-align: center;
-    color: #666;
-    font-size: 0.8vw;
-}
-.high-price{
-    text-align: center;
-    color: #1ecbe1;
-    padding-top: 10%;
-}
-.low-price{
-    text-align: center;
-    color: #1ecbe1;
-    padding-top: 10%;
-}
-.average-price-sub-header{
-    text-align: center;
-    color: #666;
-    font-size: 0.8vw;
-}
-.tooltip{
-    position: absolute;			
-    text-align: center;			
-    width: 150px;					
-    height: 150px;										
-    background: #151d1e;
-    border: 0px;		
-    border-radius: 8px;
+.winery-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.tooltip h5{
-    margin-top: 0;
-    color: #1ecbe1;
+.winery-name {
+  text-align: center !important;
 }
-.tooltip h4{
-    color: #1ecbe1;
+
+.winery-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-#winery-link{
-    color: red;
+
+.winery-subheader {
+  text-align: center;
+  opacity: 0.7;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.winery-stats {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 1.5rem 2rem;
+  margin: 0 auto 2rem;
+  border: 1px solid rgb(25, 25, 25);
+  background-color: rgba(16, 16, 16, 0.573);
+  border-radius: 16px;
+  width: fit-content;
+  backdrop-filter: blur(10px);
+}
+
+.statistic {
+  text-align: center;
+}
+
+.score {
+  color: white;
+  font-weight: bold;
+}
+
+.subtext {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+.winery-svg {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  overflow: visible;
+}
+.winery-tooltip {
+  position: absolute;
+  left: 50%;
+  bottom: 18%;
+  transform: translateX(-50%);
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #191919;
+  background-color: #101010;
+  backdrop-filter: blur(8px);
+  color: #fff;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.winery-tooltip h4 {
+  margin: 0 0 4px 0;
+  font-size: 1rem;
+  color: #a97bff;
 }

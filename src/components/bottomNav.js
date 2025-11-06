@@ -1,27 +1,38 @@
-import React, { Component } from 'react';
-import Paper from '@material-ui/core/Paper';
-import Typography from "@material-ui/core/Typography";
-import { Link } from 'react-router-dom';
-import '../styles/bottomNav.css';
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import Typography from "@mui/material/Typography";
+import "../styles/bottomNav.css";
 
-class BottomNav extends Component {
-    
-    render() {
-        return( 
-            /* BOTTOM NAVIGATION ONCE A WINE GLASS IS SELECTED */
-            <Paper className="bottom-navigation" elevation={24} style={{backgroundColor: "#151d1e"}}>
-                <div className="link" id="wine-link">
-                    <Typography component={Link} to={"/wine/" + localStorage.getItem("wine-id")} className="link-name" id="link-name-wine" gutterBottom>WINE</Typography>      
-                </div>
-                <div className="link" id="winery-link">
-                    <Typography component={Link} to={"/winery/" + localStorage.getItem("wine-id")} className="link-name" id="link-name-winery" gutterBottom>WINERY</Typography>    
-                </div>
-                <div className="link" id="taster-link">
-                    <Typography component={Link} to={"/taster/" + localStorage.getItem("wine-id")} className="link-name" id="link-name-taster" gutterBottom>TASTER</Typography>      
-                </div>
-            </Paper>
-        )
-    }
-}
- 
+const BottomNav = () => {
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const id = searchParams.get("id");
+
+  if (!id) return null; // hide nav if no wine is selected
+
+  const links = [
+    { label: "WINE", to: `/wine?id=${id}` },
+    { label: "WINERY", to: `/winery?id=${id}` },
+    { label: "TASTER", to: `/taster-compare?id=${id}` },
+    { label: "COUNTRY", to: `/country-compare?id=${id}` },
+  ];
+
+  return (
+    <div>
+      <div className="bottom-navigation">
+        {links.map((link) => (
+          <Typography
+            key={link.label}
+            component={Link}
+            to={link.to}
+            className="link-name"
+          >
+            {link.label}
+          </Typography>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 export default BottomNav;
